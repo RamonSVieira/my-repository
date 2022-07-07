@@ -1,0 +1,55 @@
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  padding: 16px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+body.scroll .menu ul {
+  background-color: #c961de80;
+}
+
+.menu ul li img {
+  width: 46px;
+}
+
+.menu ul li a {
+  display: flex;
+  padding: 6px 12px;
+
+  font: 500 1.25rem/1 "Poppins";
+  color: #fff;
+
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+
+  background-color: #fff;
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  transition: width 0.3s;
+}
+
+.menu ul li a:hover:not(.menu ul li:nth-child(3) a)::after {
+  width: 100%;
+}
+
+body {
+  height: 1800px;
+}
