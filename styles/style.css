@@ -1,7 +1,10 @@
 @import url("./patterns/reset.css");
 @import url("./patterns/patterns.css");
+@import url("./patterns/header.css");
 
 @import url("./utilities/colors.css");
 @import url("./utilities/typography.css");
 
-@import url("./patterns/header.css");
+@import url("./utilities/button.css");
+
+@import url("./home.css");
