@@ -39,7 +39,7 @@
 }
 
 body.scroll .menu ul {
-  background-color: var(--bg-header-desktop);
+  background-color: var(--bg-header);
 }
 
 .menu ul li img {
@@ -49,8 +49,6 @@ body.scroll .menu ul {
 .menu .desktop li a {
   display: flex;
   padding: 6px 12px;
-
-  color: var(--primary-color-text);
 
   position: relative;
   transition: color 0.3s;
@@ -91,7 +89,7 @@ body {
   }
 
   body .menu #mobile {
-    background-color: var(--bg-header-mobile);
+    background-color: var(--bg-header);
   }
 
   .menu .mobile {
