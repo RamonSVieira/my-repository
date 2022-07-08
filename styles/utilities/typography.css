@@ -9,3 +9,24 @@
 .font-1p {
   font: 400 1rem/1 "Poppins";
 }
+
+@media (max-width: 920px) {
+  .font-1xl {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .font-1xl {
+    font-size: 2rem;
+  }
+  .font-1p {
+    font: 400 0.75rem/1 "Poppins";
+  }
+}
+
+@media (max-width: 500px) {
+  .font-1xl {
+    font-size: 1.5rem;
+  }
+}

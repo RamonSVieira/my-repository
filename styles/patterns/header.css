@@ -88,6 +88,11 @@ body {
     display: none;
   }
 
+  .menu::after {
+    width: 200px;
+    height: 200px;
+  }
+
   body .menu #mobile {
     background-color: var(--bg-header);
   }
@@ -111,6 +116,7 @@ body {
 
   .menu .mobile li a svg {
     width: 40px;
+    fill: var(--primary-color-text);
   }
 
   .menu .mobile li a svg:active {
@@ -119,11 +125,6 @@ body {
 }
 
 @media (max-width: 500px) {
-  .menu::after {
-    width: 200px;
-    height: 200px;
-  }
-
   .menu .mobile {
     gap: 24px;
   }

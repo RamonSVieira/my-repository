@@ -4,9 +4,21 @@ body {
 
 .container {
   max-width: 1200px;
-  min-height: 800px;
+  padding-block: 200px;
   padding-inline: 48px;
   margin: auto;
 
   box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-block: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding-block: 100px;
+  }
 }

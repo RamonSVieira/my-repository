@@ -15,11 +15,28 @@
 }
 
 #home .container h1 {
-  max-width: 700px;
+  max-width: 20ch;
 }
 
 #home .container .home-links {
   display: flex;
   justify-content: center;
   gap: 24px;
+}
+
+@media (max-width: 700px) {
+  #home .container h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteudo {
+    gap: 32px;
+  }
+
+  #home .container .home-links {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
