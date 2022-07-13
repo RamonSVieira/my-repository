@@ -1,0 +1,35 @@
+#about .conteudo {
+  max-width: 630px;
+  min-height: 630px;
+  border-radius: 50%;
+  padding: 32px;
+  box-sizing: border-box;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-button-secondary);
+  background: var(--bg-button-secondary-gradient);
+
+  position: relative;
+}
+
+#about .conteudo::before {
+  content: "";
+  background-image: url("../assets/icons/detail-about.svg");
+  width: 350px;
+  height: 500px;
+  right: -168px;
+  bottom: -200px;
+  position: absolute;
+}
+
+#about .text-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
