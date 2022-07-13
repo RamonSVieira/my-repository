@@ -3,6 +3,8 @@
   height: 90px;
   margin: auto;
   position: relative;
+
+  z-index: 1;
 }
 
 .menu::after {

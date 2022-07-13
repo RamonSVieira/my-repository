@@ -15,21 +15,54 @@
   background: var(--bg-button-secondary);
   background: var(--bg-button-secondary-gradient);
 
+  box-shadow: 0px 0px 100px #ffffff1a;
+
   position: relative;
 }
 
-#about .conteudo::before {
+/* #about .conteudo::after {
   content: "";
   background-image: url("../assets/icons/detail-about.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 350px;
   height: 500px;
-  right: -168px;
+  right: -175px;
   bottom: -200px;
   position: absolute;
-}
+} */
 
 #about .text-conteudo {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (max-width: 700px) {
+  #about .conteudo {
+    min-height: 480px;
+    max-width: 480px;
+  }
+  /* #about .conteudo::after {
+    width: 233px;
+    height: 333px;
+    right: -111px;
+    bottom: -140px;
+  }*/
+}
+
+@media (max-width: 600px) {
+  #about .conteudo {
+    grid-template-columns: 1fr;
+
+    border-radius: 16px;
+  }
+
+  #about .conteudo img {
+    margin: auto;
+  }
+
+  #about .conteudo .text-conteudo {
+    text-align: center;
+  }
 }

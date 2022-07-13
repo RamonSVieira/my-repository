@@ -1,27 +1,23 @@
 body {
   background-color: #0f103f;
   overflow-x: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
 }
 
 .container {
   max-width: 1200px;
-  padding-block: 200px;
   padding-inline: 48px;
   margin: auto;
 
   box-sizing: border-box;
-
-  border: 2px solid white;
 }
 
-@media (max-width: 700px) {
-  .container {
-    padding-block: 150px;
-  }
-}
-
-@media (max-width: 500px) {
-  .container {
-    padding-block: 100px;
+@media (max-width: 600px) {
+  body {
+    gap: 100px;
   }
 }
