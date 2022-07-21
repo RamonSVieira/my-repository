@@ -1,8 +1,13 @@
+header {
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .menu {
   max-width: 1440px;
   height: 90px;
   margin: auto;
-  position: relative;
 
   z-index: 1;
 }
