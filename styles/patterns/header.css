@@ -45,6 +45,10 @@ header {
   display: none;
 }
 
+.menu ul {
+  z-index: 2;
+}
+
 body.scroll .menu ul {
   background-color: var(--bg-header);
 }
