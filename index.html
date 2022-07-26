@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <title>Ramon Vieira</title>
 </head>
@@ -76,7 +77,77 @@
     </div>
   </section>
 
+  <section id="projects">
+    <div class="container color-text-primary">
+      <h3 class="font-1xg">My recents projects</h3>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-button-prev"></div>
+
+        <div class="cards font-1g swiper-wrapper">
+          <div class="card swiper-slide">
+            <a href="https://ramonsvieira.github.io/myLinks/" target="_blank">
+              <img src="./assets/images/img-my-links.png" alt="">
+              <h4>My links</h4>
+            </a>
+          </div>
+
+          <div class="card swiper-slide">
+            <a href="https://ramonsvieira.github.io/animais-fantasticos/" target="_blank">
+              <img src="./assets/images/img-animais-fantasticos.png" alt="">
+              <h4>Animais Fantásticos</h4>
+            </a>
+          </div>
+
+          <div class="card swiper-slide">
+            <a href="https://ramonsvieira.github.io/bikcraft/" target="_blank">
+              <img src="./assets/images/img-bikcraft.png" alt="">
+              <h4>Bikcraft</h4>
+            </a>
+          </div>
+
+          <div class="card swiper-slide">
+            <a href="https://ramonsvieira.github.io/DoctorCare/" target="_blank">
+              <img src="./assets/images/img-doctorcare.png" alt="">
+              <h4>Doctor Care</h4>
+            </a>
+          </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+  </section>
+
   <script src="./script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      slideToClickedSlide: false,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 50,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>
