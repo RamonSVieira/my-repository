@@ -51,6 +51,7 @@ header {
 
 body.scroll .menu ul {
   background-color: var(--bg-header);
+  box-shadow: 0px 1px 10px black;
 }
 
 .menu ul li img {
