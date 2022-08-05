@@ -3,46 +3,196 @@
   margin-bottom: 30px;
 }
 
-.cards {
+.slider {
   display: flex;
   padding: 20px;
   flex: 1;
 }
 
-.card a {
+.slide a {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   border-radius: 30px;
-  background: rgba(181, 249, 253, 0.42);
+  background: rgba(181, 249, 253, 0.3);
   backdrop-filter: blur(20px);
 
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 
-.card a img {
+.slide a img {
   padding: 20px;
   width: 350px;
   max-height: 350px;
 }
 
-.card a h4 {
+.slide a h4 {
   width: 100%;
-  box-sizing: border-box;
   border-radius: 0px 0px 30px 30px;
 
   background: rgba(0, 0, 0, 0.5);
+
+  flex: 1;
 
   text-align: center;
   padding: 16px;
 }
 
-.card a:hover {
+.swiper .slide a:hover {
   background: rgba(181, 249, 253, 0.678);
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   transform: scale(1.2);
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+  border-radius: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background-color: #000;
+  border-radius: 24px;
+  padding: 16px;
+  overflow: hidden;
+  transform: translate(0);
+  transition: 0.25s;
+
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  box-shadow: 0px 0px 5px rgb(65, 61, 61);
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -64px;
+  left: -64px;
+  width: 150%;
+  height: 80%;
+  transform: rotate(-6deg);
+  z-index: -1;
+}
+
+/* Mudar bg aqui pra cada card */
+
+.card::before {
+  background-size: contain;
+}
+
+.card.card-bikcraft::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-bikcraft.png");
+}
+
+.card.card-doctor::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-doctorcare2.png");
+}
+.card.card-links::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-my-links2.png");
+}
+.card.card-animais::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-animais-fantasticos.png");
+}
+.card.card-bikcraft::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-bikcraft2.png");
+}
+
+.card .product {
+  height: 200px;
+  width: 300px;
+  object-fit: contain;
+  transform: rotate(-20deg);
+}
+.card .price {
+  text-align: right;
+}
+.card .price h4 {
+  font-size: 24px;
+}
+.card .button-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.card .button-right a {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card .button-right a:hover {
+  transform: scale(1);
+}
+
+.card .button-right a svg {
+  width: 28px;
+}
+
+.cards {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .swiper {
+    display: none;
+  }
+
+  .cards {
+    display: grid;
+  }
+}
+
+@media (max-width: 990px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
