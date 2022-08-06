@@ -86,10 +86,6 @@ body.scroll .menu ul {
   width: 100%;
 }
 
-body {
-  height: 1800px;
-}
-
 @media (max-width: 1000px) {
   .menu .desktop {
     gap: 40px;

@@ -89,8 +89,6 @@
   z-index: -1;
 }
 
-/* Mudar bg aqui pra cada card */
-
 .card::before {
   background-size: contain;
 }
