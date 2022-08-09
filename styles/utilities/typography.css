@@ -48,6 +48,12 @@
   }
 }
 
+@media (max-width: 620px) {
+  .font-1g {
+    font: 700 1.15rem/1.3 "Poppins";
+  }
+}
+
 @media (max-width: 500px) {
   .font-1xl {
     font-size: 1.5rem;
