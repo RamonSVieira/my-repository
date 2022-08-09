@@ -39,7 +39,7 @@
 
 #skills .list-skills li i {
   font-size: 5rem;
-  transition: color 0.3s;
+  transition: color 0.4s;
 }
 
 #skills .list-skills li:hover i.fa-html5 {

@@ -82,13 +82,20 @@ body.scroll .menu ul {
   transition: width 0.3s;
 }
 
-.menu .desktop li a:hover:not(.menu .desktop li:nth-child(3) a)::after {
+.menu .desktop li a:hover::after,
+.menu .desktop li a.active::after {
   width: 100%;
 }
 
 @media (max-width: 1000px) {
   .menu .desktop {
-    gap: 40px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu .desktop {
+    gap: 10px;
   }
 }
 
@@ -142,3 +149,5 @@ body.scroll .menu ul {
     width: 36px;
   }
 }
+
+/* Animação ao rolar o site */

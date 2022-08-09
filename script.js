@@ -23,3 +23,43 @@ iconsSkills.forEach((item, index) => {
     contentSkills[index + 1].classList.add("view");
   });
 });
+
+// page scroll animation
+
+window.addEventListener("scroll", onScroll);
+
+onScroll();
+
+function onScroll() {
+  activeMenuAtCurrentSection(home);
+  activeMenuAtCurrentSection(about);
+  activeMenuAtCurrentSection(projects);
+  activeMenuAtCurrentSection(skills);
+  activeMenuAtCurrentSection(footer);
+}
+
+function activeMenuAtCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2.5;
+
+  const sectionTop = section.offsetTop;
+
+  const sectionHeight = section.offsetHeight;
+
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+
+  const sectionEndsAt = sectionTop + sectionHeight;
+
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
+
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+
+  const sectionId = section.getAttribute("id");
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
+
+  menuElement.classList.remove("active");
+
+  if (sectionBoundaries) {
+    menuElement.classList.add("active");
+  }
+}

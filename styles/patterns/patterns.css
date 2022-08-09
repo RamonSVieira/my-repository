@@ -8,7 +8,12 @@ body {
   gap: 150px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
+  padding-top: 60px;
   max-width: 1440px;
   padding-inline: 48px;
   margin: auto;

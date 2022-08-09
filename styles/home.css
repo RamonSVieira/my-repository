@@ -1,5 +1,8 @@
+#home {
+  padding-top: 165px;
+}
+
 #home .conteudo {
-  max-width: 700px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -9,7 +12,7 @@
 }
 
 #home .container h1 {
-  max-width: 22ch;
+  max-width: 21ch;
   text-align: center;
 }
 
@@ -19,7 +22,17 @@
   gap: 24px;
 }
 
+@media (max-width: 900px) {
+  #home {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 700px) {
+  #home {
+    padding-top: 0;
+  }
+
   #home .container h1 {
     text-align: center;
   }
