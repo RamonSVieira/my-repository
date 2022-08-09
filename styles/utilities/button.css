@@ -6,20 +6,23 @@
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.2s;
+  border-radius: 30px;
 }
 
 .button.primary {
   background: var(--bg-button-primary);
-  box-shadow: 5px 5px 10px var(--color-button-shadow);
-
-  border-radius: 30px;
+  box-shadow: 3px 3px 5px var(--color-button-shadow);
 }
 
 .button.secondary {
   background: var(--bg-button-secondary);
   background: var(--bg-button-secondary-gradient);
   box-shadow: 5px 5px 15px var(--color-button-shadow);
-  border-radius: 30px;
+}
+
+.button.form {
+  background: linear-gradient(to right, #ffffff, #9c9c9c);
+  color: rgba(47, 47, 138);
 }
 
 .button:hover {

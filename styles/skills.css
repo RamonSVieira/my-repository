@@ -10,6 +10,11 @@
   background: rgba(47, 47, 138, 0.3);
 }
 
+#skills .container .bg h3 {
+  grid-column: span 2;
+  text-align: center;
+}
+
 #skills .list-skills ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -75,10 +80,6 @@
   display: flex;
 }
 
-body {
-  margin-bottom: 200px;
-}
-
 @media (max-width: 990px) {
   #skills .list-skills ul {
     grid-template-columns: 1fr 1fr;
@@ -92,6 +93,10 @@ body {
 
   #skills .content-skills ul li {
     text-align: center;
+  }
+
+  #skills .container .bg h3 {
+    grid-column: 1;
   }
 }
 

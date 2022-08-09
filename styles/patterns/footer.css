@@ -1,0 +1,239 @@
+footer {
+  background-color: var(--bg-header);
+  position: relative;
+  margin-top: 250px;
+  padding-bottom: 40px;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 350px;
+  background-image: url("../../assets/images/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -350px;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 36px;
+}
+
+footer .container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: rgba(47, 47, 138, 0.7);
+  padding: 24px;
+  border-radius: 2rem;
+}
+
+footer .container form input::placeholder {
+  color: #ffffff5e;
+}
+
+footer .container form h3 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+footer .container form h3,
+footer .container form .wrap-input100:nth-child(4),
+footer .container form .wrap-input100:nth-child(5),
+footer .container input[type="submit"] {
+  grid-column: span 2;
+}
+
+footer .container input[type="submit"] {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.wrap-input100 {
+  position: relative;
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 45px;
+}
+
+.input100 {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  font-size: 20px;
+  color: white;
+  line-height: 1.2;
+  padding: 0 2px;
+  border: none;
+  outline: none;
+}
+
+input[type="submit"] {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  transition: all 0.4s;
+
+  background: var(--bg-header);
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.info-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.box a {
+  background: rgba(47, 47, 138);
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.box a p {
+  width: 100%;
+  text-align: center;
+}
+
+.box {
+  position: relative;
+  border-radius: 8px;
+  background: rgba(47, 47, 138, 0.7);
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 560px;
+  height: 50px;
+  transform: rotate(-40deg) translateY(-50px);
+  background: linear-gradient(to right, #56e8f2, #2f80ed);
+}
+
+.box:hover::after {
+  animation: border-effect 0.9s ease-out;
+}
+
+@keyframes border-effect {
+  0% {
+    transform: rotate(-40deg) translateY(-100px);
+  }
+
+  100% {
+    transform: rotate(-40deg) translateY(300px);
+  }
+}
+
+.info-contact a i {
+  font-size: 4rem;
+}
+
+.rights {
+  grid-column: 1/ -1;
+  display: flex;
+  justify-content: center;
+}
+
+.rights p {
+  text-align: center;
+  border-top: 2px solid white;
+  padding: 16px 48px;
+}
+
+@media (max-width: 900px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    height: 150px;
+  }
+
+  .box::after {
+    transform: rotate(-40deg) translateY(-110px);
+  }
+}
+
+@media (max-width: 700px) {
+  footer .container form {
+    grid-template-columns: 1fr;
+  }
+
+  footer .container form h3,
+  footer .container form .wrap-input100:nth-child(4),
+  footer .container form .wrap-input100:nth-child(5),
+  footer .container input[type="submit"] {
+    grid-column: 1;
+  }
+
+  .info-contact a i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .info-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-contact .box {
+    max-width: 250px;
+    min-width: 250px;
+  }
+}

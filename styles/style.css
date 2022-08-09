@@ -1,6 +1,7 @@
 @import url("./patterns/reset.css");
 @import url("./patterns/patterns.css");
 @import url("./patterns/header.css");
+@import url("./patterns/footer.css");
 
 @import url("./utilities/colors.css");
 @import url("./utilities/typography.css");
