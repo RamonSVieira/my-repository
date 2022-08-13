@@ -35,7 +35,7 @@ header {
   justify-content: center;
   gap: 100px;
 
-  padding: 16px 32px;
+  padding: 32px 32px;
 
   position: fixed;
   left: 0;
@@ -87,6 +87,12 @@ body.scroll .menu ul {
   width: 100%;
 }
 
+.menu .mobile li a.active i,
+.menu .mobile li a:hover i {
+  transition: color 0.3s;
+  color: #2f80ed;
+}
+
 @media (max-width: 1000px) {
   .menu .desktop {
     gap: 30px;
@@ -130,13 +136,8 @@ body.scroll .menu ul {
     display: inline-block;
   }
 
-  .menu .mobile li a svg {
-    width: 40px;
-    fill: var(--primary-color-text);
-  }
-
-  .menu .mobile li a svg:active {
-    transform: scale(120%);
+  .menu .mobile li a i {
+    font-size: 1.75rem;
   }
 }
 
@@ -149,5 +150,3 @@ body.scroll .menu ul {
     width: 36px;
   }
 }
-
-/* Animação ao rolar o site */

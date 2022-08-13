@@ -26,20 +26,34 @@ iconsSkills.forEach((item, index) => {
 
 // page scroll animation
 
-window.addEventListener("scroll", onScroll);
+// verificando se é mobile ou desktop
+window.addEventListener("scroll", () => {
+  if (window.innerWidth > 700) {
+    function onScroll() {
+      activeMenuAtCurrentSectionDesktop(home);
+      activeMenuAtCurrentSectionDesktop(about);
+      activeMenuAtCurrentSectionDesktop(projects);
+      activeMenuAtCurrentSectionDesktop(skills);
+      activeMenuAtCurrentSectionDesktop(footer);
+    }
+    onScroll();
+  } else {
+    function onScroll() {
+      activeMenuAtCurrentSectionMobile(home);
+      activeMenuAtCurrentSectionMobile(about);
+      activeMenuAtCurrentSectionMobile(projects);
+      activeMenuAtCurrentSectionMobile(skills);
+      activeMenuAtCurrentSectionMobile(footer);
+    }
 
-onScroll();
+    onScroll();
+  }
+});
 
-function onScroll() {
-  activeMenuAtCurrentSection(home);
-  activeMenuAtCurrentSection(about);
-  activeMenuAtCurrentSection(projects);
-  activeMenuAtCurrentSection(skills);
-  activeMenuAtCurrentSection(footer);
-}
+// animação do desktop
 
-function activeMenuAtCurrentSection(section) {
-  const targetLine = scrollY + innerHeight / 2.5;
+function activeMenuAtCurrentSectionDesktop(section) {
+  const targetLine = scrollY + innerHeight / 3;
 
   const sectionTop = section.offsetTop;
 
@@ -61,5 +75,35 @@ function activeMenuAtCurrentSection(section) {
 
   if (sectionBoundaries) {
     menuElement.classList.add("active");
+  }
+}
+
+// animação do mobile
+
+function activeMenuAtCurrentSectionMobile(section) {
+  const targetLine = scrollY + innerHeight / 6;
+
+  const sectionTop = section.offsetTop;
+
+  const sectionHeight = section.offsetHeight;
+
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+
+  const sectionEndsAt = sectionTop + sectionHeight;
+
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
+
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+
+  const sectionId = section.getAttribute("id");
+  const menuElementMobile = document.querySelector(
+    `.mobile a[href*=${sectionId}]`
+  );
+
+  menuElementMobile.classList.remove("active");
+
+  if (sectionBoundaries) {
+    menuElementMobile.classList.add("active");
   }
 }
