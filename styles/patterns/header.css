@@ -87,8 +87,7 @@ body.scroll .menu ul {
   width: 100%;
 }
 
-.menu .mobile li a.active i,
-.menu .mobile li a:hover i {
+.menu .mobile li a.active i {
   transition: color 0.3s;
   color: #2f80ed;
 }
