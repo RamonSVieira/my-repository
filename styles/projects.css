@@ -5,6 +5,7 @@
 
 .slider {
   display: flex;
+  align-items: stretch;
   padding: 20px;
   flex: 1;
 }
@@ -22,6 +23,8 @@
 }
 
 .slide a img {
+  min-height: 350px;
+  object-fit: cover;
   padding: 20px;
   width: 350px;
   max-height: 350px;
@@ -133,6 +136,15 @@
       rgba(41, 84, 163, 0.6) 83%
     ),
     url("../assets/images/img-bikcraft2.png");
+}
+
+.card.card-upside-down::before {
+  background-image: linear-gradient(
+      130deg,
+      rgba(201, 97, 222, 0.3) 21%,
+      rgba(41, 84, 163, 0.6) 83%
+    ),
+    url("../assets/images/img-upside-down.png");
 }
 
 .card .product {
